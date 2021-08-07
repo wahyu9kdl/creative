@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML Editor Preview</title>
+<meta name="google" content="notranslate">
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.1/codemirror.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.1/theme/monokai.min.css">
+<!--
+Copyright (c) 2021, Aw Score Code - AL HIKMAH [ Desain by : Aw Group Channel ] All rights reserved.
+For licensing, see LICENSE.html or https://kata-h.blogspot.com/p/license.html-->
+<!--
+Copyright (c) 2021, Aw Score Code - Desain by : Aw Group Channel All rights reserved.
+For licensing, see LICENSE.html or https://www.awgroupchannel.my.id/p/license.html
+-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.1/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.1/mode/xml/xml.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.1/mode/javascript/javascript.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.1/mode/css/css.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.1/mode/htmlmixed/htmlmixed.min.js"></script>
+<script>
+var $ = function(el) {
+    return document.querySelector(el);
+};
+
+function updatePreview(html)
+{
+    $('#preview-frame').contentWindow.document.open();
+    $('#preview-frame').contentWindow.document.write(html);
+    $('#preview-frame').contentWindow.document.close();
+}
+
+$('#code-editor').addEventListener('input', function(e) {
+    updatePreview(this.value);
+});
+
+window.addEventListener('beforeunload', function(e)
+{
+  if (e) {
+    // Cancel the event
+    e.preventDefault();
+    // Chrome requires returnValue to be set
+    e.returnValue = '';
+  }
+
+  return 'Are you sure want to exit?';
+});
+</script>
+<script>
+var $ = function(el) {
+    return document.querySelector(el);
+};
+
+function updatePreview(html)
+{
+    $('#preview-frame').contentWindow.document.open();
+    $('#preview-frame').contentWindow.document.write(html);
+    $('#preview-frame').contentWindow.document.close();
+}
+
+window.addEventListener('beforeunload', function(e)
+{
+  if (e) {
+    // Cancel the event
+    e.preventDefault();
+    // Chrome requires returnValue to be set
+    e.returnValue = '';
+  }
+
+  return 'Are you sure want to exit?';
+});
+
+window.addEventListener('DOMContentLoaded', function(e) {
+  cm = CodeMirror.fromTextArea($('#code-editor'), {
+      lineNumbers: true,
+      styleActiveLine: true,
+      mode: 'text/html',
+      theme: 'monokai'
+  });
+
+  cm.on('change', function() {
+      updatePreview(cm.getValue());
+  });
+
+  updatePreview(cm.getValue()); 
+  });
+</script>
+<style>
+html {
+    height: 100%;
+}
+ {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Georgia", "Arial", "Serif";
+    width: 100%;
+    position: relative;
+    min-height: 100%;
+    box-sizing: border-box;
+    height: 100%;
+    color: #999;
+    background-color: #272822;
+}
+h2.title {
+    display: block;
+    width: 100%;
+    padding: 0.5em 0.5em 0.5em 1em;
+    font-size: 1.2em;
+    font-weight: normal;
+    box-sizing: border-box;
+}
+.text-center {
+    text-align: center;
+}
+.hide {
+    display: none;
+}
+.border-bottom {
+    border-bottom: 1px solid #333;
+}
+.editor, .preview {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+}
+.editor #code-editor {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f1f1f1;
+    font-family: monospace;
+    font-size: 18px;
+}
+.preview #preview-frame {
+    height: 100%;
+    width: 100%;
+    border: none;
+    background-color: #FFFFFF ;
+}
+@media screen and (min-width: 720px) {
+    .editor {
+        width: 50%;
+        float: left;
+        padding-bottom: 0;
+    }
+    .menu {
+        width: 300px;
+        border-right: 1px dotted #999;
+        border-bottom: 1px dotted #999;
+    }
+    .preview {
+        width: 50%;
+        float: left;
+    }
+    .full-width {
+        width: 100%;
+        float: initial;
+    }
+}
+</style>
+</head>
+<body>
+<a href="index.html">
+    <img src="logo.png" class="navi" alt="logo" />
+    </a>
+    <style>
+    .navi{
+    width:100px;
+    height:100px;
+    position:nav;
+    bottom:0px;
+    right:0px;
+    z-index:100;
+    }
+    </style>
+    <a href="https://awsos.blogspot.com">
+    <img src="Aw.png" class="navi" alt="logo" /></a>
+
+<!-- EDITOR WINDOW -->
+<div class="editor">
+    <h2 class="title text-center border-bottom">HTML Editor</h2>
+    <textarea id="code-editor"><!DOCTYPE html>
+    <html>
+    <head>
+    <title>Contoh HTML EDITOR</title>
+    </head>
+    <body>
+    Contoh HTML EDITOR
+    </body>
+    </html>
+    <!--
+    Copyright (c) 2021, Aw Score Code - Desain by : Aw Group Channel All rights reserved.
+    For licensing, see LICENSE.html or https://www.awgroupchannel.my.id/p/license.html
+    --></textarea>
+</div>
+<div>
+<blod>SPONSOR</blod>[  ] <marquee direction='Left' scrollamount='5'><div class="separator" style="clear: both; texQ" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><a href="https://www.alhikmah.my.id"><img border="0" data-original-height="107" data-original-width="675" ><img src="https://1.bp.blogspot.com/-Yojek3sZEMw/X4paomwTZzI/AAAAAAAABY0/hjijdNS5UUotr4ad6_2T97_APTFZNNFjQCLcBGAsYHQ/s320/cooltext365765723728921%2B%25281%2529.png" width="320" /></a></div></marquee>
+
+</div>
+<!-- PREVIEW WINDOW -->
+<div class="preview">
+    <h2 class="title text-center border-bottom">Preview</h2>
+    <iframe id="preview-frame"><!--
+    Copyright (c) 2021, Aw Score Code - Desain by : Aw Group Channel All rights reserved.
+    For licensing, see LICENSE.html or https://www.awgroupchannel.my.id/p/license.html
+    --></iframe>
+</div>
+
+
+<div>Desain by <a href="https://awsos.blogspot.com" >Aw Group Channel</a></tbody>
+
+<!--
+Copyright (c) 2021, Aw Score Code - Desain by : Aw Group Channel All rights reserved.
+For licensing, see LICENSE.html or https://www.awgroupchannel.my.id/p/license.html
+--><div style="bottom: 0px; color: #333333; font-family: verdana, arial; padding: 5px; position: fixed; text-align: center; width: 400px;"><hr style="font-size: 14px; height: 1px; width: 360px;" /><a href="index.html">Home</a></div><p></p> 
+
+</body>
+</html>

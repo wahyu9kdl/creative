@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Privasi Policy Generator Tool</title>
+
+<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+<!--
+Copyright (c) 2021, Aw Score Code - AL HIKMAH [ Desain by : Aw Group Channel ] All rights reserved.
+For licensing, see LICENSE.html or https://kata-h.blogspot.com/p/license.html-->
+<!--
+Copyright (c) 2021, Aw Score Code - Desain by : Aw Group Channel All rights reserved.
+For licensing, see LICENSE.html or https://www.awgroupchannel.my.id/p/license.html
+-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
+const generate = document.querySelector('.generate-markup');
+
+generate.addEventListener('click', () => {
+	const youtubeID = document.querySelector('#youtubeVID').value;
+	const headline = document.querySelector('#headline').value;
+	const blurb = document.querySelector('#blurb').value;
+	const markupContainer = document.querySelector('.generator__markup-generated');
+	
+	const markup = `
+<div>
+
+
+<h2>Kebijakan Privasi untuk <b>${youtubeID}</b></h2> <p>Di <b>${youtubeID}</b>, dapat diakses dari <b>${headline} </b> , salah satu prioritas utama kami adalah privasi pengunjung kami. Dokumen Kebijakan Privasi ini berisi jenis informasi yang dikumpulkan dan dicatat oleh ${youtubeID} dan cara kami menggunakannya.</p><p>Jika Anda memiliki pertanyaan tambahan atau memerlukan informasi lebih lanjut tentang Kebijakan Privasi kami, jangan ragu untuk Menghubungi melalui email di <b>${blurb}</b></p> <h2>File Log</h2> <p> <b>${youtubeID}</b> mengikuti prosedur standar menggunakan file log. File-file ini mencatat pengunjung ketika mereka mengunjungi situs web. Semua perusahaan hosting melakukan ini dan merupakan bagian dari analisis layanan hosting. Informasi yang dikumpulkan oleh file log termasuk alamat protokol internet (IP), jenis browser, Penyedia Layanan Internet (ISP), cap tanggal dan waktu, halaman rujukan/keluar, dan mungkin jumlah klik. Ini tidak terkait dengan informasi apa pun yang dapat diidentifikasi secara pribadi. Tujuan informasi ini adalah untuk menganalisis tren, mengelola situs, melacak pergerakan pengguna di situs web, dan mengumpulkan informasi demografis.</p><h2>Cookie dan Web Beacon</h2><p>Seperti situs web lainnya, < b>${youtubeID}</b> menggunakan cookie. Cookie ini digunakan untuk menyimpan informasi termasuk preferensi pengunjung dan halaman di situs web yang diakses atau dikunjungi pengunjung. Informasi tersebut digunakan untuk mengoptimalkan pengalaman pengguna dengan menyesuaikan konten halaman web kami berdasarkan jenis browser pengunjung dan/atau informasi lainnya.</p><h2>Google DoubleClick DART Cookie</h2><p>Google adalah salah satu dari ketiga -vendor pesta di situs kami. Ini juga menggunakan cookie, yang dikenal sebagai cookie DART, untuk menayangkan iklan kepada pengunjung situs kami berdasarkan kunjungan mereka ke www.website.com dan situs lain di internet. Namun, pengunjung dapat memilih untuk menolak penggunaan cookie DART dengan mengunjungi Kebijakan Privasi jaringan iklan dan konten Google di URL berikut – <a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a></p><h2>Kebijakan Privasi</h2> <P> Anda dapat berkonsultasi dengan daftar ini untuk menemukan Kebijakan Privasi untuk setiap mitra periklanan <b>${youtubeID}</b>. Kebijakan Privasi kami dibuat dengan bantuan <a href="https://www.awgroupchannel.my.id/p/kontak.html?m=1/">Generator Kebijakan Privasi GDPR</a></p><p>Server iklan atau jaringan iklan pihak ketiga menggunakan teknologi seperti cookie, JavaScript, atau Web Beacon yang digunakan dalam iklan masing-masing dan tautan yang muncul di <b>${youtubeID}</b>, yang dikirim langsung ke browser pengguna. Mereka secara otomatis menerima alamat IP Anda ketika ini terjadi. Teknologi ini digunakan untuk mengukur efektivitas kampanye iklan mereka dan/atau untuk mempersonalisasi konten iklan yang Anda lihat di situs web yang Anda kunjungi.</p><p>Perhatikan bahwa <b>${youtubeID}</b> tidak memiliki akses atau kontrol terhadap cookie ini yang digunakan oleh pengiklan pihak ketiga.</p><h2>Kebijakan Privasi Pihak Ketiga</h2><p><b>${youtubeID}</b> Kebijakan Privasi tidak berlaku untuk pengiklan atau situs web lain. Oleh karena itu, kami menyarankan Anda untuk berkonsultasi dengan Kebijakan Privasi masing-masing dari server iklan pihak ketiga ini untuk informasi lebih rinci. Ini mungkin termasuk praktik dan instruksi mereka tentang cara memilih keluar dari opsi tertentu. Anda dapat menemukan daftar lengkap Kebijakan Privasi ini dan tautannya di sini: Tautan Kebijakan Privasi.</p><p>Anda dapat memilih untuk menonaktifkan cookie melalui opsi browser individual Anda. Untuk mengetahui informasi lebih rinci tentang manajemen cookie dengan browser web tertentu, dapat ditemukan di situs web masing-masing browser. Apa Itu Cookie?</p><h2> Informasi Anak</h2><p>Bagian lain dari prioritas kami adalah menambahkan perlindungan bagi anak-anak saat menggunakan internet. Kami mendorong orang tua dan wali untuk mengamati, berpartisipasi, dan/atau memantau serta memandu aktivitas online mereka.</p><p><b>${youtubeID}</b> tidak secara sengaja mengumpulkan Informasi Identifikasi Pribadi apa pun dari anak-anak di bawah usia 13 tahun. Jika menurut Anda anak Anda memberikan informasi semacam ini di situs web kami, kami sangat menganjurkan Anda untuk segera Menghubungi dan kami akan melakukan upaya terbaik kami untuk segera menghapus informasi tersebut dari catatan kami.</p><h2> Hanya Kebijakan Privasi Online</h2><p>Kebijakan Privasi ini hanya berlaku untuk aktivitas online kami dan berlaku untuk pengunjung situs web kami sehubungan dengan informasi yang mereka bagikan dan/atau kumpulkan di <b> ${youtubeID}</b>. Kebijakan ini tidak berlaku untuk informasi apa pun yang dikumpulkan secara offline atau melalui saluran selain situs web ini.</p><h2>Persetujuan</h2><p>Dengan menggunakan situs web kami, Anda dengan ini menyetujui Kebijakan Privasi kami dan menyetujui Persyaratannya dan Ketentuan.</p>
+
+
+<p>Generator Privacy Policy by<a href="https://www.awgroupchannel.my.id/p/kontak.html">Aw Group Channel</p>
+
+
+</div>
+	`;
+	
+	markupContainer.textContent = markup;
+});
+
+function copyToClipboard(element) {
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($(element).text()).select();
+  document.execCommand("copy");
+  $temp.remove();
+}
+</script>
+
+<style type="text/css">
+body {
+  padding: 1rem;
+}
+.generator {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.generator__questions {
+  display: flex;
+  flex-flow: column wrap;
+  flex: 1;
+}
+.generator__questions label {
+  margin-bottom: 0.25rem;
+}
+.generator__questions input {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+.generator__questions input#youtubeVID {
+  width: 200px;
+}
+.generator__questions input#headline,
+.generator__questions input#blurb {
+  width: 270px;
+}
+.generator__questions button {
+  margin-top: 1rem;
+  max-width: 200px;
+  border: 1px solid #27ae60;
+background: #2ecc71;
+padding: 1rem;
+color: #ecf0f1;
+font-size: 16px;
+border-radius: 4px;
+}
+.generator__questions button:hover {
+background: #27ae60;
+}
+.generator__markup {
+flex: 1;
+max-width: 50%;
+}
+.generator__markup pre code {
+background-color: #eee;
+border: 1px solid #999;
+display: block;
+padding: 20px;
+overflow: auto;
+}
+button {
+height: 30px;
+width: 150px;
+border-radius: 3px;
+padding: 10px;
+font-size: 18px;
+font-family:;
+height: 52px;
+cursor: pointer;
+background-color: #2ecc71;
+}
+</style>
+</head>
+<body>
+<center><a href="index.html">
+    <img src="logo.png" class="navi" alt="logo" />
+    </a>
+    <style>
+    .navi{
+    width:100px;
+    height:100px;
+    position:nav;
+    bottom:0px;
+    right:0px;
+    z-index:100;
+    }
+    </style>
+    <a href="https://awsos.blogspot.com">
+    <img src="Aw.png" class="navi" alt="logo" /></a>
+</center>
+<div class="generator">
+  <div class="generator__questions">
+    <h1>Privacy Policy Generator Tool:</h1>
+    <label for="youtubeVID">Website Name:</label>
+    <input id="youtubeVID" type="text" placeholder="ex. Google">
+
+    <label for="headline">Website Url:</label>
+    <input id="headline" type="text" placeholder="google.com">
+
+    <label for="blurb">Emali Id:</label>
+    <input id="blurb" type="text" placeholder="123@gmail.com">
+
+    <button class="generate-markup">Generate Code</button>
+  </div>
+  <div class="generator__markup">
+    <h1>Copy And Paste Result:</h1>
+    <pre>
+
+    <p id="p2"><code class="generator__markup-generated"></code></p>
+
+<button onclick="copyToClipboard('#p2')">Copy TEXT 2</button>
+
+		</pre>
+  </div>
+  <div style="bottom: 0px; color: #333333; font-family: verdana, arial; padding: 5px; position: fixed; text-align: center; width: 400px;"><hr style="font-size: 14px; height: 1px; width: 360px;" /><a href="index.html">Home</a></div><p></p> 
+  
+</div>
+</body>
+</html>

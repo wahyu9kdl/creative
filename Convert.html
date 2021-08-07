@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Convert</title>
+
+
+
+<!--
+Copyright (c) 2021, Aw Score Code - AL HIKMAH [ Desain by : Aw Group Channel ] All rights reserved.
+For licensing, see LICENSE.html or https://kata-h.blogspot.com/p/license.html-->
+<!--
+Copyright (c) 2021, Aw Score Code - Desain by : Aw Group Channel All rights reserved.
+For licensing, see LICENSE.html or https://www.awgroupchannel.my.id/p/license.html
+-->
+</head>
+<body>
+<a href="index.html">
+    <img src="logo.png" class="navi" alt="logo" />
+    </a>
+    <style>
+    .navi{
+    width:100px;
+    height:100px;
+    position:nav;
+    bottom:0px;
+    right:0px;
+    z-index:100;
+    }
+    </style>
+    <a href="https://awsos.blogspot.com">
+    <img src="Aw.png" class="navi" alt="logo" /></a>
+
+<center>
+Masukan teks/artikel yang akan dihitung</center>
+<div id="wct_embed_counts">
+<textarea id="wct_embed_input_text" rows="12" style="-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 100%;"></textarea>
+<br />
+<div id="wct_embed_result" style="margin: 5px; text-align: center;">
+<b>0</b> kata <b>0</b> karakter <b>0</b> karakter tanpa spasi <b>0</b> kata unik <b>0</b> kalimat <b>0</b> paragraf</div>
+<script type="text/javascript">
+//<![CDATA[
+function wct_getWordStats(e){var t=[],n=e.trim();t.num_character=e.trim().length;var r=n.split(/\s+/).join("");t.num_character_wo_spaces=r.length,t.num_paragraph=0,n.length>0&&(t.num_paragraph=n.split(/\n+/).length);var a=n.replace(/(\w)[-_'](\w)/gi,"$10$2");a=a.replace(/(\d)[,.](\d)/gi,"$10$2"),t.num_sentence=0,a.length>0&&(t.num_sentence=a.replace(/"/gi,"").split(/[.?!:\n]+/).length);var _=a.split(/[\s\n]+/);if(t.num_word=0,a.length>0&&(t.num_word=_.length),t.avg_sentence_length=0!=t.num_sentence?Math.round(t.num_word/t.num_sentence*10)/10:0,0!=t.num_word){var c=r.length/t.num_word;t.avg_word_length=Math.round(10*c)/10}else t.avg_word_length=0;var d=[];t.num_unique_word=0,t.percentage_num_unique_word=0;for(var s=0;s<_.length;s++)d[_[s]]=1;var u=Object.keys(d).length;return t.num_unique_word=Object.keys(d).length,percentage_unique_words=Math.round(100*u/t.num_word),t.percentage_num_unique_word=percentage_unique_words,t}function wct_display_counts(){var e=document.getElementById("wct_embed_input_text").value;wordStats=wct_getWordStats(e),document.getElementById("wct_embed_result").innerHTML="<b>"+wordStats.num_word+"</b> kata <b>"+wordStats.num_character+"</b> karakter <b>"+wordStats.num_character_wo_spaces+"</b> karakter tanpa spasi <b>"+wordStats.num_unique_word+"</b> kata unik <b>"+wordStats.num_sentence+"</b> kalimat <b>"+wordStats.num_paragraph+"</b> paragraf"}var wct_embed_result=document.getElementById("wct_embed_result");wct_embed_result.setAttribute("style","margin:5px;text-align:center;");var wct_embed_input_text=document.getElementById("wct_embed_input_text");wct_embed_input_text.setAttribute("style","width: 100%;-webkit-box-sizing: border-box;-moz-box-sizing: border-box; box-sizing: border-box;");var wct_embed_result=document.getElementById("wct_embed_result");wct_embed_result.innerHTML="<b>0</b> kata <b>0</b> karakter <b>0</b> karakter tanpa spasi <b>0</b> kata unik <b>0</b> kalimat <b>0</b> paragraf";var wct_textarea=document.getElementById("wct_embed_input_text");wct_textarea.value="",wct_textarea.addEventListener&&(wct_textarea.addEventListener("input",wct_display_counts,!1),wct_textarea.addEventListener("textInput",wct_display_counts,!1),wct_textarea.addEventListener("textinput",wct_display_counts,!1)),wct_textarea.attachEvent&&wct_textarea.attachEvent("onpropertychange",wct_display_counts);
+//]]>
+</script><br /></div>
+
+
+
+
+<div dir="ltr" style="text-align: left;" trbidi="on">
+<style type="text/css">
+.daerah-tombol-2{
+ color:#fff;
+ background:#2980b9;
+ text-align:center;
+ padding:20px 20px 40px 20px;
+ margin:30px;
+ border-radius:4px;
+ font-weight:bold;
+}
+.daerah-tombol{
+ background:#2980b9;
+ text-align:center;
+ padding:20px 20px 40px 20px;
+ margin:0;
+ border-radius:4px;
+}
+#belakang{
+ background:#ecf0f1;
+ position:relative;
+ display:block;
+ clear:both;
+ border-radius:5px;
+ padding:20px;
+ border:1px solid rgba(0,0,0,0.05);
+}
+textarea{
+ width:94%;
+ height:300px;
+ margin:0 auto;
+ display:block;
+ background-color:#fff;
+ padding:20px;
+ font:normal 13px 'Courier New',Monospace;
+ border:0;
+ box-shadow:inset 0 0 0 1px rgba(0,0,0,0.05);
+ border-radius:5px 5px 0 0;
+ resize:none
+}
+button{
+ color:#fff!important;
+ height:50px;
+ font-size:14px;
+ font-weight:bold;
+ background:#07ACEC;
+ padding:15px 25px;
+ border-radius:4px;
+ border:none;
+ outline:none;
+ box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+ cursor:pointer;
+ transition:all .4s ease-in-out;
+ text-transform:uppercase;
+ margin-top:15px;
+}
+#outer-wrapper{
+ margin:0 auto;
+ text-align:left;
+ float:none;
+ background-position:center!important;
+}
+#post-wrapper{
+ width:100%;
+ max-width:100%;
+ margin:0 auto;
+ text-align:left;
+ float:none;
+ background-position:center!important;
+}
+.post-body,.post{
+ background-position:center!important;
+}
+h2.post-title a,h1.post-title a,h2.post-title,h1.post-title{
+ display:none;
+ margin-top:0;
+ margin:0;
+}
+#blog1,#artikel,.blog-posts{
+ background-position:center!important;
+}
+.breadcrumbs{
+ display:none;
+ margin-top:0;
+ margin:0;
+}
+#comments,#breadcrumb,#sidebar-wrapper,#menu-wrap{
+ display:none;
+ margin-top:0;
+ margin:0;
+}
+.post-inner{
+ padding:0 0 0 0;
+ margin:20px auto;
+}
+.post-body ul#wrapin{
+ display:block;
+ position:relative;
+ margin:30px auto 0 auto;
+}
+.post-body ul#wrapin li{
+ display:block;
+ margin:0 auto;
+ text-align:left;
+}
+.post-body ul#wrapin br{
+ display:none;
+}
+</style>
+<br />
+<div id="belakang"><form id="wordCount" method="get">
+<div id="headWordCount"><textarea cols="30" height="100" id="textAreaCount" placeholder="Copy and Paste some words here (CTRL + V)" spellcheck="false"></textarea></div>
+<br />
+<div class="button-group">
+<div class="daerah-tombol">
+<button id="submitWordCount" type="submit"> HITUNG KATA </button> <button id="resetWordCount" type="reset"> SETEL ULANG </button></div>
+
+<center>
+<div class="daerah-tombol-2">
+<div id="boxHasil"> <span style="font-size: large;"><b> HASIL :</b></span>
+<br /><br />
+<div id="hasilKata"></div>
+<div id="hasilKarakter"></div>
+</div>
+</div> 
+</center>
+
+</div></form>
+
+<script type="text/javascript">
+ var namaNode = document.getElementById("textAreaCount"); var formNode = document.getElementById("wordCount"); var hasilNode = document.getElementById("hasilKata"); var hasil2Node = document.getElementById("hasilKarakter"); var submitNode = document.getElementById("submitWordCount"); var resetNode = document.getElementById("resetWordCount"); document.getElementById("submitWordCount").style.cursor ="pointer"; document.getElementById("resetWordCount").style.cursor="pointer"; function textCount(e){ hasilNode.innerHTML = 0; hasilNode.innerHTML = "JUMLAH KATA : " + namaNode.value.split(' ').length; hasil2Node.innerHTML = "JUMLAH KARAKTER : " + namaNode.value.length; e.preventDefault(); } function resetCount(e){ namaNode.value = ""; hasilNode.innerHTML =""; hasil2Node.innerHTML =""; e.preventDefault(); } submitNode.addEventListener("click", textCount); resetNode.addEventListener("click",resetCount);
+</script>
+<div class="fixed-bottom" align="center">	
+    <div class="text-white">
+    © <?php echo date('Y'); ?> Copyright :
+    <a class="text-white" href="https://www.awgroupchannel.my.id/p/kontak.html"> Aw Group Channel</a>
+    </div></php>
+    <div style="bottom: 0px; color: #333333; font-family: verdana, arial; padding: 5px; position: fixed; text-align: center; width: 400px;"><hr style="font-size: 14px; height: 1px; width: 360px;" /><a href="index.html">Home</a></div><p></p> 
+    
+</div>
+</div>
+</body>
+</html>
