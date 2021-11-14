@@ -1,5 +1,5 @@
 <title>Auto Visitor</title>
-<link href='http://res7ock.org/assets/img/favicon.png' rel='shortcut icon' alt='icon'>
+<link href='https://1.bp.blogspot.com/-yHaxLELAKKY/YKxk9Ls6PPI/AAAAAAAADFw/omUqwM6uDEsJb4S0qvIvEIY4_sDr847SwCLcBGAsYHQ/s225/anigif.gif' rel='shortcut icon' alt='icon'>
 </head>
 
 <style>
