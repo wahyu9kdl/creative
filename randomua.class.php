@@ -4,9 +4,9 @@
  * Random user agent creator
  * @since Sep 28, 2012
  * @version 1.0
- * @link http://burgosoft.com/php-scripts/random-uagent/
+ * @link https://github.com/wahyu9kdl/Aw-Creative/randomua.class.php
  * @author Randolph Burgos (exeQutor)
- * @filesource https://github.com/lukapusic/random-uagent
+ * @filesource https://github.com/wahyu9kdl/Aw-Creative/blob/main/randomua.class.php
  */
  
  class Random_UA
